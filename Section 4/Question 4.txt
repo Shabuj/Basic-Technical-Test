@@ -1,0 +1,29 @@
+Multiple Class inheritence is not possible in C#. Using Interface we can achieve multiple inheritence in C#. 
+
+For example:
+
+interface IPrintable{  
+void print();  
+}  
+
+interface IShowable{  
+void show();  
+}  
+
+class example implements IPrintable,IShowable{  
+public void print(){
+System.out.println("Hello");
+}  
+public void show(){
+System.out.println("Welcome");
+}  
+
+
+Benifits:
+
+1. For hundred percentage of Abstraction purposes we use Interface in C#. 
+It shows only essential things to the user and hides the internal details, 
+for example, sending SMS where you type the text and send the message.
+You don't know the internal processing about the message delivery.
+
+2.For  Achieving loose coupling Code. 

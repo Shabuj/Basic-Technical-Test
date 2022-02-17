@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+namespace TagChecker
+{
+    class Program
+    {
+        
+        static Boolean isMatchingPair(string str1, string str2)
+        {
+            if (str1 == str2)
+                return true;
+            else
+                return false;
+        }
+
+
+        static string areTagsBalanced(string str)
+        {
+
+            Stack<string> st = new Stack<string>();
+            string exp = str.Trim();
+
+            for (int i = 0; i < exp.Length; i++)
+            {
+               
+                if (exp[i] == '<' && Char.IsUpper(exp[i+1]) && exp[i + 2]=='>')
+                {
+                    st.Push('<' + exp[i + 1].ToString()+'>' );
+                }
+
+                if (exp[i] == '<' && exp[i+1] == '/' && Char.IsUpper(exp[i + 2]) && exp[i + 3] == '>')
+                {
+
+                    if (st.Count == 0)
+                    {
+                        return "Expected # found </"+ exp[i + 2].ToString() + ">";
+                    }
+
+                    string popedString = st.Pop();
+
+                    if (!isMatchingPair(popedString, "<"+ exp[i+2].ToString()+">"))
+                    {
+                        string expectedString = popedString.Insert(1, "/");
+                        return "Expected " + expectedString + " found </" + exp[i + 2].ToString() + ">";
+                    }
+                }
+            }
+
+            if (st.Count == 0)
+                return "Correctly tagged paragraph"; 
+            else
+            {
+                return "Expected " + st.Pop().Insert(1, "/") + " found #";
+            }
+        }
+
+        
+        public static void Main(String[] args)
+        {
+            Console.WriteLine("Enter the String for Check Tag :");
+            string text = Console.ReadLine(); 
+            string tagStatus = areTagsBalanced(text);
+            Console.WriteLine(tagStatus);
+
+        }
+    }
+}

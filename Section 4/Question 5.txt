@@ -1,0 +1,33 @@
+1.Troubleshooting:
+Using Encapsulation Troubleshooting is easier with the OOP language.
+Suppose the user has no idea where the bug lies if there is an error within the code.
+Also, the user has no idea where to look into the code to fix the error.
+This is quite difficult for standard programming languages. 
+However, when Object-Oriented Programming is applied, the user knows exactly where to look into the code whenever there is an error.
+There is no need to check other code sections as the error will show where the trouble lies.
+It is mainly through encapsulation that makes the objects self-contained. 
+This further helps in troubleshooting and easier collaborative development.
+
+2. Code Reusability:
+One of two important concepts that are provided by Object-Oriented Programming is the concept of inheritance.
+Through inheritance, the same attributes of a class are not required to be written repeatedly. 
+Thus, Object-Oriented Programming offers the feature of class reusability where the class that is once created can be used again. 
+In doing so, time is saved, and the need for extra coding is eliminated as similar features can be inherited.
+
+3.Productivity:
+The productivity of two codes increases through the use of Object-Oriented Programming. 
+This is because the OOP has provided so many libraries that new programs have become more accessible.
+Also, as it provides the facility of code reusability, the length of a code is decreased, 
+further enhancing the faster development of newer codes and programs.
+
+4.Security:
+Because of the concept of data abstraction in OOPS, only a limited amount of data is shown to the user.
+The rest data is not exposed while exposing only the required amount of data. Therefore, it allows the maintenance of security.
+The concept of abstraction is used to hide the complexity from other users and demonstrate the element’s information as per the requirements.
+
+5.Code Flexibility:
+The flexibility is offered through the concept of Polymorphism. A scenario can be considered for a better understanding of the concept.
+A person can behave differently whenever the surroundings change. For example, if the person is in a market, the person will behave like a customer, 
+or the behavior might get changed to a student when the person is in a school or any institution.
+
+

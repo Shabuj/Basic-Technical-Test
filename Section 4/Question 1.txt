@@ -1,0 +1,6 @@
+Shared memory is a memory shared between two or more processes.
+It is an efficient means of passing data between programs.
+Depending on context, programs may run on a single processor or on multiple separate processors.
+Using memory for communication inside a single program, e.g. among its multiple threads, is also referred to as shared memory.
+
+We know that to communicate between two or more processes, we use shared memory.

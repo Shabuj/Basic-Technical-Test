@@ -1,0 +1,10 @@
+1. Steep learning curve: The thought process involved in object-oriented programming
+may not be natural for some people, and it can take time to get used to it. It is
+complex to create programs based on interaction of objects. Some of the key
+programming techniques, such as inheritance and polymorphism, can be
+challenging to comprehend initially.
+
+2. Larger program size: Object-oriented programs typically involve more lines of code
+than procedural program. Its slower than other procedural program.
+
+3. Programmers need to have brilliant designing skill and programming skill along with proper planning because using OOP is little bit tricky.

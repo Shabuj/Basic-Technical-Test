@@ -1,0 +1,22 @@
+Polymorphism is considered one of the important features of Object-Oriented Programming.
+when we need to perform a single action in different ways that time we should use Polymorphism.
+In other words, when  we need to perform one interface and have multiple implementations.
+
+For Example:
+
+class Bank{  
+float RateOfInterest(){return 0;}  
+}  
+class BracBank extends Bank{  
+float RateOfInterest(){return 2.5f;}  
+}  
+class UcbBank extends Bank{  
+float RateOfInterest(){return 10.5f;}  
+}  
+class CityBank extends Bank{  
+float RateOfInterest(){return 3.5f;}  
+}   
+
+
+Here we consider a scenario where Bank is a class that provides a method to get the rate of interest.
+However, the rate of interest may differ according to banks.

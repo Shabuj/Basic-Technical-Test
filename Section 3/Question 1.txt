@@ -1,0 +1,43 @@
+using System;
+using System.IO;
+
+namespace IterateDirectory
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a Start Directory Path : ");
+            string folderPath = Console.ReadLine();
+
+            DirectoryInfo startDir = new DirectoryInfo(folderPath);
+
+            RecurseFileStructure recurseFileStructure = new RecurseFileStructure();
+            recurseFileStructure.TraverseDirectory(startDir);
+        }
+
+        public class RecurseFileStructure
+        {
+            public void TraverseDirectory(DirectoryInfo directoryInfo)
+            {
+                var subdirectories = directoryInfo.EnumerateDirectories();
+
+                foreach (var subdirectory in subdirectories)
+                {
+                    TraverseDirectory(subdirectory);
+                }
+                var files = directoryInfo.EnumerateFiles();
+                foreach (var file in files)
+                {
+                    Console.WriteLine("File  name  : {0}", file.Name);
+                    string[] lines = File.ReadAllLines(file.FullName);
+                    foreach (string line in lines)
+                        Console.WriteLine("File Text :{0}", line);
+                }
+
+            }
+
+           
+        }
+    }
+}
